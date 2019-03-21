@@ -40,9 +40,9 @@ CNN_SMOOTHIE_TAG=latest
 ```
 
 OUTPUT_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/output/
-UPLOAD_DIR=~/Documents/2.GitHub/eipm/cnn_smoothie/data/uploads/
-PROCESS_DIR=~/Documents/2.GitHub/eipm/cnn_smoothie/data/process/
-RESULT_DIR=~/Documents/2.GitHub/eipm/cnn_smoothie/data/result/
+UPLOAD_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/uploads/
+PROCESS_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/process/
+RESULT_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/result/
 
 ### Run Docker Container
 
