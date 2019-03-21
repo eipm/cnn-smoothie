@@ -30,14 +30,19 @@ The Readme file is divided into two parts:
 ### Load Environment Variables
 
 ```bash
-DOCKER_CONTAINER_NAME=cnn_smoothie \
-CNN_SMOOTHIE_PORT=3001 \
+DOCKER_CONTAINER_NAME=cnn_smoothie
+CNN_SMOOTHIE_PORT=3001
 OUTPUT_DIR=/cnn_smoothie/data/output/
 UPLOAD_DIR=/cnn_smoothie/data/uploads/
 PROCESS_DIR=/cnn_smoothie/data/process/
 RESULT_DIR=/cnn_smoothie/data/result/
 CNN_SMOOTHIE_TAG=latest
 ```
+
+OUTPUT_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/output/
+UPLOAD_DIR=~/Documents/2.GitHub/eipm/cnn_smoothie/data/uploads/
+PROCESS_DIR=~/Documents/2.GitHub/eipm/cnn_smoothie/data/process/
+RESULT_DIR=~/Documents/2.GitHub/eipm/cnn_smoothie/data/result/
 
 ### Run Docker Container
 
@@ -54,6 +59,7 @@ eipm/cnn-smoothie:${CNN_SMOOTHIE_TAG}
 ```
 
 Where:
+
 
 - **${DOCKER_CONTAINER_NAME}**: The CNN Smoothie docker container name.
 - **${CNN_SMOOTHIE_PORT}**: The cnn_smoothie host port.

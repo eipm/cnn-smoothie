@@ -2,7 +2,7 @@ import tensorflow as tf
 slim = tf.contrib.slim
 import sys
 import os
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
 import os
 from nets import inception
