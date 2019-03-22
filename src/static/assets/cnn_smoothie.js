@@ -144,8 +144,8 @@ function postFormData(formData, baseApiUrl) {
                 const bar = card.getElementsByClassName('bar')[0];
                 const goodText = card.getElementsByClassName('good-text')[0];
                 const poorText = card.getElementsByClassName('poor-text')[0];
-                const goodPercentage = (response[fileName].Good * 100).toFixed(2);
-                const poorPercentage = (response[fileName].Poor * 100).toFixed(2);
+                const goodPercentage = (response[fileName].LUAD * 100).toFixed(2);
+                const poorPercentage = (response[fileName].LUSC * 100).toFixed(2);
                 bar.setAttribute('style', `width:${goodPercentage}%;`);
                 bar.innerHTML = `&nbsp;`;
                 goodText.innerHTML = `${goodPercentage}%`;
@@ -170,7 +170,7 @@ function removeImageCard(imageName) {
     imagesPlaceholder.removeChild(card);
     delete currentImages[imageName];
     imageRemovedUpdateUI();
-    updateResultsUI(calculateMajorVoteResult());
+    // updateResultsUI(calculateMajorVoteResult());
 };
 
 function imageRemovedUpdateUI() {
