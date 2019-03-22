@@ -31,11 +31,11 @@ The Readme file is divided into two parts:
 
 ```bash
 DOCKER_CONTAINER_NAME=cnn_smoothie
-CNN_SMOOTHIE_PORT=3001
-OUTPUT_DIR=/cnn_smoothie/data/output/
-UPLOAD_DIR=/cnn_smoothie/data/uploads/
-PROCESS_DIR=/cnn_smoothie/data/process/
-RESULT_DIR=/cnn_smoothie/data/result/
+CNN_SMOOTHIE_PORT=3002
+OUTPUT_DIR=/stork/data/cnn_smoothie/output/
+UPLOAD_DIR=/stork/data/cnn_smoothie/uploads/
+PROCESS_DIR=/stork/data/cnn_smoothie/process/
+RESULT_DIR=/stork/data/cnn_smoothie/result/
 CNN_SMOOTHIE_TAG=latest
 ```
 
@@ -52,8 +52,8 @@ docker run -d --name ${DOCKER_CONTAINER_NAME} \
 -p ${CNN_SMOOTHIE_PORT}:80 \
 -v ${OUTPUT_DIR}:/output \
 -v ${UPLOAD_DIR}:/uploads \
--v ${PROCESS_DIR}:/cnn_smoothie/src/cnn_smoothie_src/process:ro \
--v ${RESULT_DIR}:/cnn_smoothie/src/cnn_smoothie_src/result:ro \
+-v ${PROCESS_DIR}:/cnn_smoothie/src/cnn_smoothie_src/process/:ro \
+-v ${RESULT_DIR}:/cnn_smoothie/src/cnn_smoothie_src/result/:ro \
 --env USERS_DICT="{ 'user1': 'password1', 'user2': 'password2' }" \
 eipm/cnn-smoothie:${CNN_SMOOTHIE_TAG}
 ```

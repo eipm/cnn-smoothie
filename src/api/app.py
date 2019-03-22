@@ -18,6 +18,7 @@ from api.version import api_version
 UPLOAD_DIR = '/uploads'
 OUTPUT_DIR = '/output'
 STATIC_DIR = '/cnn_smoothie/src'
+RESULT_DIR = '/cnn_smoothie/src/cnn_smoothie_src/result/'
 
 ALLOWED_EXTENSIONS = set(['jpg', 'png', 'tif', 'tiff'])
 
@@ -112,7 +113,8 @@ def upload_image():
     output_file = os.path.join(OUTPUT_DIR, output_filename)
 
     # 5. Run cnn-smoothie
-    python_command='python3 ' + os.environ['PREDICT_DIR'] + '/predict.py v1 ' + os.environ['RESULT_DIR'] + ' ' + request_dir + ' ' + output_file + ' 2'
+    python_command='python3 ' + os.environ['PREDICT_DIR'] + '/predict.py v1 ' + RESULT_DIR + ' ' + request_dir + ' ' + output_file + ' 2'
+    print(python_command)
     os.system(python_command)
 
     # 6. Parse cnn-smoothie Results
