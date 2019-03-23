@@ -39,10 +39,12 @@ RESULT_DIR=/stork/data/cnn_smoothie/result/
 CNN_SMOOTHIE_TAG=latest
 ```
 
+```bash
 OUTPUT_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/output/
 UPLOAD_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/uploads/
 PROCESS_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/process/
 RESULT_DIR=~/Documents/2.GitHub/eipm/cnn-smoothie/data/result/
+```
 
 ### Run Docker Container
 
