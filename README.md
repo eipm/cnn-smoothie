@@ -7,7 +7,7 @@ Deep Convolutional Neural Networks Enable Discrimination of Heterogeneous Digita
 Pegah Khosravi, Ehsan Kazemi, Marcin Imielinski, Olivier Elemento, Iman Hajirasouliha
 EBioMedicine (December 2017)
 
-The link to the published journal version: http://dx.doi.org/10.1016/j.ebiom.2017.12.026
+The link to the published journal version: [http://dx.doi.org/10.1016/j.ebiom.2017.12.026](http://dx.doi.org/10.1016/j.ebiom.2017.12.026)
 
 The Readme file is divided into two parts:
 
@@ -59,7 +59,6 @@ eipm/cnn-smoothie:${CNN_SMOOTHIE_TAG}
 ```
 
 Where:
-
 
 - **${DOCKER_CONTAINER_NAME}**: The CNN Smoothie docker container name.
 - **${CNN_SMOOTHIE_PORT}**: The cnn_smoothie host port.
