@@ -28,6 +28,7 @@ app = Flask(__name__)
 app.config['UPLOAD_DIR'] = UPLOAD_DIR
 app.config['SECRET_KEY'] = 'secret_key'
 app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024
 CORS(app)
 
 users_dict = literal_eval(os.environ['USERS_DICT'])
