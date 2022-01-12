@@ -1,13 +1,13 @@
-FROM python:3.6.8-stretch
+FROM python:3.7.9-buster
 #===============================#
-# Docker Image Configuration	#
+# Docker Image Configuration    #
 #===============================#
 LABEL org.opencontainers.image.source='https://github.com/eipm/cnn-smoothie' \
     vendor='Englander Institute for Precision Medicine' \
     description='CNN Smoothie' \
     maintainer='als2076@med.cornell.edu' \
     base_image='python' \
-    base_image_version='3.6.8-stretch'
+    base_image_version='3.7.9-buster'
 
 ENV APP_NAME='cnn_smoothie' \
     TZ='US/Eastern' \
@@ -18,17 +18,17 @@ ENV RESULT_DIR=${CNN_SMOOTHIE}/result \
     PYTHONPATH=${PYTHONPATH}:${CNN_SMOOTHIE}:${PREDICT_DIR}
 
 #===================================#
-# Install Prerequisites         	#
+# Install Prerequisites             #
 #===================================#
 COPY requirements.txt /${APP_NAME}/requirements.txt
 RUN pip install -r /${APP_NAME}/requirements.txt
 #===================================#
-# Copy Files and set work directory	#
+# Copy Files and set work directory #
 #===================================#
 COPY src /${APP_NAME}/src/
 WORKDIR /${APP_NAME}
 #===================================#
-# Startup							#
+# Startup                           #
 #===================================#
 EXPOSE 80
 VOLUME uploads
